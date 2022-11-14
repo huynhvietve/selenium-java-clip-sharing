@@ -3,6 +3,7 @@ package clipsharing.common;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.time.Duration;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class BasePage {
 
   public BasePage(WebDriver driver) {
     this.driver = driver;
-    wait = new WebDriverWait(driver, 10);
+    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }
 
   WebDriver getWebDriver(){
